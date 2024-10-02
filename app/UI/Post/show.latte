@@ -1,0 +1,16 @@
+{block head}
+    <head>
+        <title>{$post->title}</title>
+    </head>
+{/block}
+{block content}
+
+<a n:href="Edit:edit $post->id">Upravit příspěvek</a>
+    <p><a n:href="Home:default">← zpět na výpis příspěvků</a></p>
+
+    <h1>{$post->title}</h1>
+
+    <div>
+        {$post->content|noescape}        
+    </div>
+{/block content}
